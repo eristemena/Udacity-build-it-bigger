@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/myjokedisplay" />
             <option value="$PROJECT_DIR$/myjokes" />
           </set>
         </option>

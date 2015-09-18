@@ -1,25 +1,17 @@
-package com.udacity.gradle.builditbigger;
+package com.ngoprekweb.myjokedisplay;
 
-import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.ngoprekweb.jokes.MyJoke;
-import com.ngoprekweb.myjokedisplay.JokeActivity;
-
-
-public class MainActivity extends ActionBarActivity {
-
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+public class JokeActivity extends AppCompatActivity {
+    public static String JOKE_KEY = "Joke key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_joke);
     }
 
 
@@ -44,16 +36,4 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void launchJokeActivity(View view){
-        Intent intent = new Intent(this, JokeActivity.class);
-        MyJoke myJoke = new MyJoke();
-        String joke = myJoke.tellJoke();
-
-        Log.i(LOG_TAG, "Joke == " + joke);
-        intent.putExtra(JokeActivity.JOKE_KEY, joke);
-        startActivity(intent);
-    }
-
-
 }

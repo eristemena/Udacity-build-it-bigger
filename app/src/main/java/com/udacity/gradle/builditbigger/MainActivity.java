@@ -1,9 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,15 +41,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void launchJokeActivity(View view){
-//        Intent intent = new Intent(this, JokeActivity.class);
-//        MyJoke myJoke = new MyJoke();
-//        String joke = myJoke.tellJoke();
-//
-//        Log.i(LOG_TAG, "Joke == " + joke);
-//        intent.putExtra(JokeActivity.JOKE_KEY, joke);
-//        startActivity(intent);
 
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Eris Ristemena"));
+        new EndpointsAsyncTask().execute(this);
     }
 
 
